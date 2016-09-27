@@ -19,6 +19,7 @@
 
 #include <cmath>
 #include "Horner.h"
+#include "LambertW.h"
 
 using namespace std;
 
@@ -330,5 +331,14 @@ namespace utl {
   // instantiations
   template double LambertW<0>(const double x);
   template double LambertW<-1>(const double x);
-
+  
+  double
+  LambertW(const int branch, const double x)
+  {
+    switch (branch) {
+    case -1: return LambertW<-1>(x);
+    case  0: return LambertW<0>(x);
+    default: return std::numeric_limits<double>::quiet_NaN();
+    }
+  }
 }

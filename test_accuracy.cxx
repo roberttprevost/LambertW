@@ -17,8 +17,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <LambertW.h>
-#include <FukushimaLambertW.h>
+#include "LambertW.h"
+#include "FukushimaLambertW.h"
 #include <iostream>
 #include <stdlib.h>
 #include <cmath>
